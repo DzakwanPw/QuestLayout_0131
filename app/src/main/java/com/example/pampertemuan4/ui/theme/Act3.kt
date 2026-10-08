@@ -26,3 +26,47 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pampertemuan4.R
 
+@Composable
+fun ActivitasPertama(modifier: Modifier = Modifier) {
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(top = 100.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = stringResource(id = R.string.prodi),
+                fontSize = 35.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = stringResource(id = R.string.univ),
+                fontSize = 22.sp
+            )
+            Spacer(modifier = Modifier.height(25.dp))
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(all = 12.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = Color.DarkGray
+                )
+            ) {
+                Row {
+                    Image(
+                        painter = painterResource(id = R.drawable.logo_umy),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(100.dp)
+                            .padding(all = 8.dp)
+                    )
+                    Spacer(modifier = Modifier.width(30.dp))
+                    Column {
+                        Text(
+                            text = stringResource(R.string.nama),
+                            fontSize = 30.sp,
+                            fontFamily = FontFamily.Cursive,
+                            color = Color.White,
+                            modifier = Modifier.padding(top = 15.dp)
