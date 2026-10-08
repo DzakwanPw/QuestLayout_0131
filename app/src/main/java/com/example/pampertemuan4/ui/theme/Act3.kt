@@ -1,6 +1,7 @@
 package com.example.pampertemuan4.ui.theme
 
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import
 
 @composable
@@ -17,7 +18,19 @@ fun ActivitasPertama(modifier: Modifier) {
         )
         Text(
             stringResource( id = R.string.univ),
+            fonrSize = 22.sp
         )
+        Spacer(modifier = Modifier.height(25.dp))
+        card(
+            modifier = Modifier
+                .fillmaxWidth( fraction = if )
+                .padding( all = 12.dp ),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.DarkGray
+            )
+        ) {
+            Row()
+                }
 
     }
 
